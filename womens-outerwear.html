@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Men's outerwear-SHOP</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link rel="icon" href="resources/shop.png">
+	<link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+	
+</head>
+<body>
+	<!-- title, the cart button and the side nav button   -->
+	<div class="title-home">
+			<div >
+				<span onclick="openNav()" class="title-menu-icon">&#9776;</span>
+			</div>
+
+		<span>S H O P</span>
+		<a href="#">
+			<img id="cart-icon" alt="cart icon" src="resources/cart.png">
+		</a>
+	</div>
+	<!-- The menu of different links to different pages is here -->
+	<div class="title-menu">
+		<a href="mens-outerware.html">Men's Outerwear </a>
+		<a href="">Ladies Outerwear </a>		
+		<a href="">Men's T-Shirts </a>		
+		<a href="">Ladies T-Shirts </a> 
+	</div>
+	<!-- when display width is reduced The menu of different links to different pages is here -->
+
+	<div id="mySidenav" class="title-menu-side">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		<a href="mens-outerware.html">Men's Outerwear </a>
+		<a href="">Ladies Outerwear </a>		
+		<a href="">Men's T-Shirts </a>		
+		<a href="">Ladies T-Shirts </a> 
+	</div>
+    <div class="title-men-outerwear">
+		<a href="">
+			<img src="./resources/ladies_outerwear.jpg">
+		</a>
+	</div>
+	<div class="title-button-men-outerwear">
+		<p>Women's outerwear</p>
+		<form>
+			<button type="submit" formaction="womens-outerwear.html">SHOP NOW</button>
+		</form>
+	</div>	
+
+	<!-- Script for side nav bar -->
+	<script>
+		function openNav() {
+			document.getElementById("mySidenav").style.width = "200px";
+			// document.body.style.backgroundColor = "rgba(0,0,0,0.3)";
+			// document.getElementById("cart-icon").style.backgroundColor =  "rgba(0,0,0,0.3)";;
+		}
+		
+		function closeNav() {
+			document.getElementById("mySidenav").style.width = "0";
+			// document.body.style.backgroundColor = "white";
+
+		}
+	</script>	
+</body>
+</html>
