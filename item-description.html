@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Description-HOME</title>
+    <link rel="icon" href="resources/shop.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+</head>
+<body>
+    <!-- title, the cart button and the side nav button   -->
+    <div class="title-home">
+		<a>
+            <span onclick="window.history.go(-1); return false;" class="title-back-arrow-icon">
+                <img src="resources/back.png"/>
+            </span>
+		</a>
+
+		<span>S H O P</span>
+		<a href="cart.html">
+			<img id="cart-icon" alt="cart icon" src="resources/cart.png">
+		</a>
+    </div>
+    	<!-- The menu of different links to different pages is here -->
+	<div class="title-menu">
+            <a href="mens-outerwear.html">Men's Outerwear </a>
+            <a href="">Ladies Outerwear </a>
+            <a href="">Men's T-Shirts </a>
+            <a href="">Ladies T-Shirts </a>
+    </div>
+    <div class="item-description">
+        <div class="item-description-image">
+            <img src="resources/hoodie-android.jpg"/>
+        </div>
+        <div class="item-description-details">
+            <div class="item-description-details-text" >
+                <h1>Men's Hoodie</h1>
+                <p>$50.00</p>
+                <!-- Here goes two input dropdown items with google style boxes for size and Quantity   -->
+                <div class="item-description-dropdown">
+                    <form>
+                        <div class="item-description-dropdown-size">
+                            <label>Size</label>
+                            <select>
+                                <option>XS</option>
+                                <option>S</option>
+                                <option>M</option>
+                                <option>L</option>
+                                <option>XL</option>
+                            </select>
+                        </div>
+                        <div class="item-description-dropdown-">
+                            <label>Quantity</label>
+                            <select>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <br>
+                <h2>
+                    Description
+                </h2>
+                <p>
+                    This cozy Android hoodie features a sublimated camo design printed inside hood and along inner sleeves and side panels. Moisture-wicking polyester fabric keeps you cool and dry. 
+                </p>
+                <p>
+                    Features:
+                </p>
+                <ul>
+                    <li>
+                        100% polyester.
+                    </li>
+                    <li>
+                        Ultra soft, fleece interior. 
+                    </li>
+                    <li>
+                        Available in smoke/lime green with the white Android robot embroidered at left chest.
+                    </li>
+                </ul>
+            </div>
+            <form>
+                <button type="submit" formaction="cart.html" id="item-add-to-cart">
+                    ADD TO CART
+                </button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

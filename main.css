@@ -8,14 +8,8 @@ body{
     display: flex;
     justify-content: space-between;
     font-weight: bold;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin: 10px;
 }
-/* .title-home img{
-
-} */
 .title-menu{
     display: flex;
     justify-content: center;
@@ -45,23 +39,23 @@ body{
     background-color: white;
     overflow-x: hidden;
     padding-top: 60px;
-  }
+}
   
-  .title-menu-side a {
+.title-menu-side a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 13px;
     color: black;
     display: block;
-  }
+}
   
-  .title-menu-side .closebtn {
+.title-menu-side .closebtn {
     position: absolute;
     top: 0;
     right: 25px;
     font-size: 36px;
     margin-left: 50px;
-  }
+}
 
 .title-menu-icon div{
     display: none;
@@ -70,32 +64,6 @@ body{
     background-color: black;
     margin: 2px 0;
 }
-/* .title-men-outerwear{
-    padding-top: 20px;
-    width: 100%;
-    height: 100%;
-}
-.title-men-outerwear img{
-    width: 100%;
-    min-width: 100%;
-    height: 400px;
-    max-height: 400px;
-    overflow: hidden;
-    object-fit: cover;
-}
-.title-button-men-outerwear{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.title-button-men-outerwear button{
-    background-color: transparent;
-    padding: 10px 35px;
-    text-align: center;
-    font-size: 16px;   
-    border: 2px solid black;   
-    cursor: pointer;
-} */
 
 .title-cover-image{
     padding-top: 20px;
@@ -110,7 +78,7 @@ body{
     height: 300px;
     object-fit: cover;
 }
-.title-cover-image button{
+button{
     background-color: transparent;
     padding: 10px 35px;
     text-align: center;
@@ -136,24 +104,58 @@ body{
     .title-cover-image img{
         max-height: 200px;
     }
+    /* this property changes the men-outerwear.html to align two hoodies in a row */
     .men-outerware-items{
         display: grid;
-        grid-template-columns:50% 50%;
+        grid-template-columns:auto auto;
     }
+    #cover-image-outerwear{
+        display: none;
+    }
+
+     /* This property make sthe description page for mobile version to avoid flexing */
+     .item-description{
+        display: grid;
+        grid-template-columns: auto;
+        align-items: center;
+        margin-top: 50px;  
+        margin-bottom: 70px;   
+    }
+   /* This property makes the button in description page for mobile version to be fixed at bottom */
+    #item-add-to-cart {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        border: none;
+        color: white;
+        background-color: #000066;
+        height: 60px;
+    }
+}
+body{
+    margin: 0px;
 }
 /* style for men-outerwear.html */
 @media only screen and (min-width: 768px) {
     .men-outerware-items{
         display: grid;
-        grid-template-columns: 33.33% 33.33% 33.33%;
+        grid-template-columns: auto auto auto;
+    }
+/* This property make sthe description page for desktop version to avoid flexing */
+    .item-description{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        margin-top: 50px;
     }
 }
 
-.men-outerware-items div{
-    padding: 20px;
+.men-outerware-items a{
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: black;
+    text-decoration: none;
 }
 .men-outerware-item > *{
     padding: 5px;
@@ -163,9 +165,58 @@ body{
     font-size: 0.9em;
 }
 .men-outerware-item img{
-    object-fit: scale-down;
+    /* align-self: center; */
+    max-width: 100%;
 }
-
-/* .men-outerware-item{
+ .men-outerware-page{
+    box-sizing: border-box;
+    width: 100%;
+}
+.men-outerware-item{
     padding: 5px;
+}
+/* Item Description page styling */
+.title-back-arrow-icon img{
+    resize: auto;
+    height: 20px;
+    width: auto;
+    cursor: pointer;
+}
+.item-description-details header{
+    opacity: 1;
+}
+.item-description-image img{
+    resize: both;
+    max-width: 100%;
+    height: auto;
+}
+.item-description-image{
+    justify-self: center;
+}
+.item-description-details-text{
+    padding: 20px;
+    opacity: 0.7;
+}
+/* .item-description-dropdown form{
+    display: flex;
+    flex-direction: column;
+} */
+/* .item-description-dropdown form{
+justify-items: center;
+} */
+.item-description-dropdown div{
+    resize: both;
+    display: grid;
+    grid-template-columns: 25% 75%;
+    align-items: center;
+    border-bottom:1px solid rgba(0,0,0,0.5);
+}
+.item-description-dropdown select{
+    background: transparent;
+    border: none;
+    height: 50px;
+    outline: none;
+}
+/* select:focus{
+    outline-offset: -2px;
 } */
