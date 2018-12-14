@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Your cart-SHOP</title>
+    <link rel="icon" href="resources/shop.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+        <!-- title, the cart button and the side nav button   -->
+        <div class="title-home">
+                <div >
+                    <span onclick="openNav()" class="title-menu-icon">&#9776;</span>
+                </div>
+    
+            <span>S H O P</span>
+            <a href="cart.html">
+                <img id="cart-icon" alt="cart icon" src="resources/cart.png">
+            </a>
+        </div> 
+        <div id="title-nav-bar-side" class="title-menu-side">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="mens-outerwear.html">Men's Outerwear </a>
+                <a href="">Ladies Outerwear </a>		
+                <a href="">Men's T-Shirts </a>	
+                <a href="">Ladies T-Shirts </a> 
+        </div>
+        <diV class="cart-title">
+            <span>Your Cart</span>
+        </diV>
+        <section class="cart-items">
+            <div class="cart-item-name">
+                <img src="resources/men-outerwear-2.jpg">
+                <p>
+                    Men's Hoodie
+                </p>
+            </div>
+            <div class="cart-item-details">
+                <label>Qty:</label>
+                <select>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                </select>
+                <label>Size:</label>
+                <select>
+                    <option>XS</option>
+                    <option>S</option>
+                    <option>M</option>
+                    <option>L</option>
+                    <option>XL</option>
+                </select>
+                <span>$50</span>
+            </div>
+            <a class="close-button">&times;</a>
+            <div class="cart-item-total-price">
+                <p>Total: $50.00</p>
+            </div>
+            <form>
+                <button type="submit" formaction="cart.html" id="item-add-to-cart">
+                    CHECKOUT
+                </button>
+            </form>
+        </section>
+</body>
+</html>

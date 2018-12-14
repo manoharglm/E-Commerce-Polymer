@@ -22,10 +22,12 @@ body{
 }
 
 .title-menu-icon{
-    display: none;
+    visibility: hidden;
     text-decoration: none;
     color: black;
     cursor:pointer ;
+    width: 32px;
+    height: auto;
 }
 
 .title-menu-side {
@@ -93,7 +95,7 @@ button{
 
 @media only screen and (max-width: 767px) {
     .title-menu-icon{
-        display: block;
+        visibility: unset;
     }
     .title-menu{
         display: none;
@@ -196,27 +198,50 @@ body{
 .item-description-details-text{
     padding: 20px;
     opacity: 0.7;
+    font-size: 0.9em;
+    line-height: 1.5em;
 }
-/* .item-description-dropdown form{
-    display: flex;
-    flex-direction: column;
-} */
-/* .item-description-dropdown form{
-justify-items: center;
-} */
 .item-description-dropdown div{
-    resize: both;
-    display: grid;
-    grid-template-columns: 25% 75%;
-    align-items: center;
     border-bottom:1px solid rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+}
+.item-description-dropdown-size{
+    border-top: 1px solid rgba(0,0,0,0.5);
+}
+.item-description-dropdown label{
+    position: absolute;
+    opacity: 0.7;
+    font-size:0.9em;
+}
+select option{
+    padding-left: 25%;
 }
 .item-description-dropdown select{
     background: transparent;
     border: none;
     height: 50px;
+    width:100%;
     outline: none;
+    z-index: 1;
+    text-indent: 20%;
+    font-size: 1.2em;
+    font-weight: 300;
 }
 /* select:focus{
     outline-offset: -2px;
 } */
+
+/* style for cart page */
+.cart-title{
+    text-align: center;
+    font-size: 1.1em;
+}
+.cart-items{
+    margin: 5%;
+}
+.cart-item-name img{
+    max-width: 15%;
+    height: auto;
+}
+
