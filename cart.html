@@ -28,45 +28,50 @@
                 <a href="">Men's T-Shirts </a>	
                 <a href="">Ladies T-Shirts </a> 
         </div>
-        <diV class="cart-title">
-            <span>Your Cart</span>
-        </diV>
-        <section class="cart-items">
-            <div class="cart-item-name">
-                <img src="resources/men-outerwear-2.jpg">
-                <p>
-                    Men's Hoodie
-                </p>
-            </div>
-            <div class="cart-item-details">
-                <label>Qty:</label>
-                <select>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                    <option>6</option>
-                </select>
-                <label>Size:</label>
-                <select>
-                    <option>XS</option>
-                    <option>S</option>
-                    <option>M</option>
-                    <option>L</option>
-                    <option>XL</option>
-                </select>
-                <span>$50</span>
-            </div>
-            <a class="close-button">&times;</a>
-            <div class="cart-item-total-price">
-                <p>Total: $50.00</p>
-            </div>
-            <form>
-                <button type="submit" formaction="cart.html" id="item-add-to-cart">
-                    CHECKOUT
-                </button>
-            </form>
-        </section>
+        <div class="cart-content">
+            <diV class="cart-title">
+                <span>Your Cart</span>
+            </diV>
+            <section class="cart-items">
+                <div class="cart-item-name">
+                    <img src="resources/men-outerwear-2.jpg">
+                    <p>
+                        Men's Hoodie
+                    </p>
+                </div>
+                <div class="cart-item-details">
+                    <label>Qty:</label>
+                    <select>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                    </select>
+                    <label>Size:</label>
+                    <select>
+                        <option>XS</option>
+                        <option>S</option>
+                        <option>M</option>
+                        <option>L</option>
+                        <option>XL</option>
+                    </select>
+                    <span>$50</span>
+                </div>
+                <a class="close-button">&times;</a>
+            </section>
+            <section class="cart-item-total-price">
+                <div class="cart-item-total-price-checkout">
+                    <p>Total:</p>
+                    <span>$50.00</span>
+                </div>
+                <form class="item-checkout-button">
+                    <button type="submit" formaction="checkout.html" id="item-add-to-cart">
+                        CHECKOUT
+                    </button>
+                </form>
+            </section>
+        </div>
 </body>
 </html>
