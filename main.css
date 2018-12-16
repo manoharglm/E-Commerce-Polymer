@@ -1,9 +1,102 @@
 *{
     font-family: 'Roboto', sans-serif;
 }
-body{
-    margin-top: 20px;
+@media only screen and (max-width: 767px) {
+    .title-menu-icon{
+        visibility: unset;
+    }
+    .title-menu{
+        display: none;
+    }   
+    .title-menu-side{
+        display: block;
+    }
+    .title-cover-image img{
+        max-height: 200px;
+    }
+    /* this property changes the men-outerwear.html to align two hoodies in a row */
+    .men-outerware-items{
+        display: grid;
+        grid-template-columns:auto auto;
+    }
+    #cover-image-outerwear{
+        display: none;
+    }
+
+     /* This property make sthe description page for mobile version to avoid flexing */
+     .item-description{
+        display: grid;
+        grid-template-columns: auto;
+        align-items: center;
+        margin-top: 50px;  
+        margin-bottom: 70px;   
+    }
+   /* This property makes the button in description page for mobile version to be fixed at bottom */
+    #item-add-to-cart {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        border: none;
+        color: white;
+        background-color: #000066;
+        height: 60px;
+    }
+    /* hide cart item details to display them on below line in mobile view */
+    /* .cart-item-details{
+        display: none;
+    } */
+    .cart-item-total-price-checkout{
+        right:0px;
+    }
+    .cart-item-details-list{
+        flex-direction: column-reverse;
+         align-items: flex-end;
+        /*justify-content: baseline; */
+    } 
+    .cart-items{
+        align-items: baseline;
+    }
+    /* to make the checkout page responsive for mobile version */
+    .checkout-form{
+        grid-template-columns: 1fr;
+    }
+    .close-button{
+        right: 15%;
+        position: absolute;
+        /* margin-bottom: 55px; */
+    }
 }
+@media only screen and (min-width: 768px) {
+    .men-outerware-items{
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
+/* This property make sthe description page for desktop version to avoid flexing */
+    .item-description{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        margin-top: 50px;
+    }
+    .checkout-form{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 5%;
+    }
+    .cart-items{
+        align-items: center;
+    }
+    .cart-content{
+        margin:5% 15%;
+    }
+    .cart-item-details-list{
+        justify-content: space-between;
+    }
+}
+/* body{
+    margin-top: 20px;
+} */
 .title-home{
     display: flex;
     justify-content: space-between;
@@ -92,84 +185,14 @@ button{
     display: flex;
 }
 
-@media only screen and (max-width: 767px) {
-    .title-menu-icon{
-        visibility: unset;
-    }
-    .title-menu{
-        display: none;
-    }   
-    .title-menu-side{
-        display: block;
-    }
-    .title-cover-image img{
-        max-height: 200px;
-    }
-    /* this property changes the men-outerwear.html to align two hoodies in a row */
-    .men-outerware-items{
-        display: grid;
-        grid-template-columns:auto auto;
-    }
-    #cover-image-outerwear{
-        display: none;
-    }
-
-     /* This property make sthe description page for mobile version to avoid flexing */
-     .item-description{
-        display: grid;
-        grid-template-columns: auto;
-        align-items: center;
-        margin-top: 50px;  
-        margin-bottom: 70px;   
-    }
-   /* This property makes the button in description page for mobile version to be fixed at bottom */
-    #item-add-to-cart {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        border: none;
-        color: white;
-        background-color: #000066;
-        height: 60px;
-    }
-    /* hide cart item details to display them on below line in mobile view */
-    .cart-item-details{
-        display: none;
-    }
-    .cart-item-total-price-checkout{
-        right:0px;
-    }
-    /* to make the checkout page responsive for mobile version */
-    .checkout-form{
-        grid-template-columns: 1fr;
-    }
-}
 body{
     margin: 0px;
 }
 /* style for men-outerwear.html */
-@media only screen and (min-width: 768px) {
-    .men-outerware-items{
-        display: grid;
-        grid-template-columns: auto auto auto;
-    }
-/* This property make sthe description page for desktop version to avoid flexing */
-    .item-description{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        align-items: center;
-        margin-top: 50px;
-    }
-    .checkout-form{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-column-gap: 5%;
-    }
-    .cart-content{
-        margin:5% 15%;
-    }
-}
+
+/* .cart-item-details{
+    display: flex;
+} */
 
 .men-outerware-items a{
     display: flex;
@@ -247,19 +270,18 @@ select option{
     font-size: 1.2em;
     font-weight: 300;
 }
-/* select:focus{
-    outline-offset: -2px;
-} */
-
+ 
 /* style for cart page */
+
 .cart-title{
     text-align: center;
     font-size: 1.1em;
 }
 .cart-items{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: grid;
+    /* align-items: center; */
+    /* justify-content: space-between; */
+    grid-template-columns: 1fr 1fr;
 }
 .cart-items, .cart-item-total-price{
     margin: 5%;
@@ -278,11 +300,11 @@ select option{
 /* display: flex;
 justify-content: space-between;
 align-items: center; */
-.cart-items{
+/* .cart-items{
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
+} */
 .cart-item-details select{
     background-color: transparent;
     border: none;
@@ -298,6 +320,7 @@ align-items: center; */
 .cart-item-details{
     display: flex;
     align-items: baseline;
+    padding: 5%;
 }
 .cart-item-details *{
     margin-right: 5%;
@@ -323,7 +346,12 @@ align-items: center; */
 }
 .cart-item-details select{
     font-size: 1.2em;
-} 
+}
+.cart-item-details-list{
+    display: flex;
+    align-items: baseline;
+    /* justify-content: space-between; */
+}  
 /* Style for checkout page*/
 .checkout-content{
     margin: 5% 10%;
@@ -371,4 +399,6 @@ align-items: center; */
     align-items: baseline;
     justify-content: space-between;  
 }
-
+/* .cart-item-details select option{
+    font-size: 1.5em;
+} */
