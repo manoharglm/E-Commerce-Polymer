@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,57 +10,58 @@
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script src="main.js"></script>
 </head>
+
 <body>
-    <div class="title-home">
-            <div >
-                <span onclick="openNav()" class="title-menu-icon">&#9776;</span>
-            </div>
+    <header class="title-home">
+        <div>
+            <span onclick="openNav()" class="title-menu-icon">&#9776;</span>
+        </div>
 
         <span>S H O P</span>
         <a href="cart.html">
             <img id="cart-icon" alt="cart icon" src="resources/cart.png">
         </a>
-    </div> 
-    <div id="title-nav-bar-side" class="title-menu-side">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="mens-outerwear.html">Men's Outerwear </a>
-            <a href="">Ladies Outerwear </a>		
-            <a href="">Men's T-Shirts </a>	
-            <a href="">Ladies T-Shirts </a> 
-    </div>
-    <div class="checkout-content">
+    </header>
+    <nav id="title-nav-bar-side" class="title-menu-side">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="mens-outerwear.html">Men's Outerwear </a>
+        <a href="">Ladies Outerwear </a>
+        <a href="">Men's T-Shirts </a>
+        <a href="">Ladies T-Shirts </a>
+    </nav>
+    <main class="checkout-content">
         <diV class="checkout-title">
             <span>Checkout</span>
             <p>Fill in your details to get your order delivered</p>
         </diV>
         <div class="checkout-form">
-            <div class="checkout-form-left-row">
+            <section class="checkout-form-left-row">
                 <h5>Account Information</h3>
-                <input placeholder="Email" type="email">
-                <input type="tel" placeholder="Phone Number">
-                <h5>Shipping Address</h5>
-                <input type="text" placeholder="Address">
-                <div class="checkout-state-zip-flex">
-                    <input type="text" placeholder="State/Province">
-                    <input type="text" placeholder="Zip/Postal Code">
-                </div>
-                <div class="checkout-country-select">
-                    <label>Country</label>
-                    <select>
-                        <option>India</option>
-                        <option>United States</option>
-                        <option>Canada</option>
-                    </select>
-                </div>
-                <h5>Billing Addres</h5>
-                <div class="checkout-checkbox">
-                    <input type="checkbox">
-                    <span>
-                        Use different billing address
-                    </span>
-                </div>
-            </div>
-            <div class="checkout-form-right-row">
+                    <input placeholder="Email" type="email">
+                    <input type="tel" placeholder="Phone Number">
+                    <h5>Shipping Address</h5>
+                    <input type="text" placeholder="Address">
+                    <div class="checkout-state-zip-flex">
+                        <input type="text" placeholder="State/Province">
+                        <input type="text" placeholder="Zip/Postal Code">
+                    </div>
+                    <div class="checkout-country-select">
+                        <label>Country</label>
+                        <select>
+                            <option>India</option>
+                            <option>United States</option>
+                            <option>Canada</option>
+                        </select>
+                    </div>
+                    <h5>Billing Addres</h5>
+                    <div class="checkout-checkbox">
+                        <input type="checkbox">
+                        <span>
+                            Use different billing address
+                        </span>
+                    </div>
+            </section>
+            <section class="checkout-form-right-row">
                 <h5>Payment Method</h5>
                 <input type="text" placeholder="Cardholder Name">
                 <input type="text" placeholder="Card Number">
@@ -94,7 +96,7 @@
                         <option>2027</option>
                         <option>2028</option>
                     </select>
-                    <input type="password" placeholder="cvv">    
+                    <input type="password" placeholder="cvv">
                 </div>
                 <h5>Order Summary</h5>
                 <div class="checkout-order-summary">
@@ -110,8 +112,13 @@
                         PLACE ORDER
                     </button>
                 </form>
-            </div>
+            </section>
         </div>
-    </div>
+    </main>
+    <footer class="title-footer">
+        <a href="https://github.com/manoharglm/">Made by Manohar</a>
+        <span>DEMO ONLY</span>
+    </footer>
 </body>
+
 </html>

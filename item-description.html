@@ -11,7 +11,7 @@
 </head>
 <body>
     <!-- title, the cart button and the side nav button   -->
-    <div class="title-home">
+    <header class="title-home">
 		<a>
             <span onclick="window.history.go(-1); return false;" class="title-back-arrow-icon">
                 <img src="resources/back.png"/>
@@ -22,24 +22,24 @@
 		<a href="cart.html">
 			<img id="cart-icon" alt="cart icon" src="resources/cart.png">
 		</a>
-    </div>
+    </header>
     	<!-- The menu of different links to different pages is here -->
-	<div class="title-menu">
+	<nav class="title-menu">
             <a href="mens-outerwear.html">Men's Outerwear </a>
             <a href="">Ladies Outerwear </a>
             <a href="">Men's T-Shirts </a>
             <a href="">Ladies T-Shirts </a>
-    </div>
-    <div class="item-description">
+    </nav>
+    <main class="item-description">
         <div class="item-description-image">
             <img src="resources/hoodie-android.jpg"/>
         </div>
-        <div class="item-description-details">
-            <div class="item-description-details-text" >
+        <section class="item-description-details">
+            <section class="item-description-details-text" >
                 <h1>Men's Hoodie</h1>
                 <p>$50.00</p>
                 <!-- Here goes two input dropdown items with google style boxes for size and Quantity   -->
-                <div class="item-description-dropdown">
+                <section class="item-description-dropdown">
                     <form>
                         <div class="item-description-dropdown-size">
                             <label>Size</label>
@@ -62,7 +62,7 @@
                             </select>
                         </div>
                     </form>
-                </div>
+                </section>
                 <br>
                 <h2>
                     Description
@@ -84,13 +84,17 @@
                         Available in smoke/lime green with the white Android robot embroidered at left chest.
                     </li>
                 </ul>
-            </div>
+            </section>
             <form>
                 <button type="submit" formaction="cart.html" id="item-add-to-cart">
                     ADD TO CART
                 </button>
             </form>
-        </div>
-    </div>
+        </section>
+    </main>
+    <footer class="title-footer">
+		<a href="https://github.com/manoharglm/">Made by Manohar</a>
+		<span>DEMO ONLY</span>
+	</footer>
 </body>
 </html>

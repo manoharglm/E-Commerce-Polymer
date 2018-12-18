@@ -14,7 +14,7 @@
 
 <body>
 	<!-- title, the cart button and the side nav button   -->
-	<div class="title-home">
+	<header class="title-home">
 		<div>
 			<span onclick="openNav()" class="title-menu-icon">&#9776;</span>
 		</div>
@@ -23,33 +23,33 @@
 		<a href="cart.html">
 			<img id="cart-icon" alt="cart icon" src="resources/cart.png">
 		</a>
-	</div>
+	</header>
 	<!-- The menu of different links to different pages is here -->
-	<div class="title-menu">
+	<nav class="title-menu">
 		<a href="mens-outerwear.html">Men's Outerwear </a>
 		<a href="">Ladies Outerwear </a>
 		<a href="">Men's T-Shirts </a>
 		<a href="">Ladies T-Shirts </a>
-	</div>
+	</nav>
 	<!-- when display width is reduced The menu of different links to different pages is here -->
 
-	<div id="mySidenav" class="title-menu-side">
+	<nav id="mySidenav" class="title-menu-side">
 		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 		<a href="mens-outerwear.html">Men's Outerwear </a>
 		<a href="">Ladies Outerwear </a>
 		<a href="">Men's T-Shirts </a>
 		<a href="">Ladies T-Shirts </a>
-	</div>
+	</nav>
 	<!-- Men outerwear section in menu page with link to men's outerwear html page -->
-	<div class="men-outerware-page">
-		<div class="title-cover-image">
+	<main class="men-outerware-page">
+		<figure class="title-cover-image">
 			<a  id="cover-image-outerwear">
 				<img src="./resources/mens_outerwear.jpg">
 			</a>
 			<p>Men's outerwear</p>
-		</div>
+		</figure>
 		<!-- grid of the outerwear  -->
-		<div class="men-outerware-items">
+		<section class="men-outerware-items">
 			<a href="#" class="men-outerware-item">
 				<img src="./resources/men-outerwear-1.jpg">
 				<strong>Men's Hoodie</strong>
@@ -109,8 +109,12 @@
 				<span>$50.00</span>
 			</a>
 
-		</div>
-	</div>
+		</section>
+	</main>
+	<footer class="title-footer">
+		<a href="https://github.com/manoharglm/">Made by Manohar</a>
+		<span>DEMO ONLY</span>
+	</footer>
 	<!-- Script for side nav bar -->
 	<script>
 		function openNav() {
@@ -121,6 +125,7 @@
 			document.getElementById("mySidenav").style.width = "0";
 		}
 	</script>
+	
 </body>
 
 </html>

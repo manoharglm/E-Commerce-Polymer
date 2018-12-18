@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,73 +10,79 @@
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script src="main.js"></script>
 </head>
+
 <body>
-        <!-- title, the cart button and the side nav button   -->
-        <div class="title-home">
-                <div >
-                    <span onclick="openNav()" class="title-menu-icon">&#9776;</span>
-                </div>
-    
-            <span>S H O P</span>
-            <a href="cart.html">
-                <img id="cart-icon" alt="cart icon" src="resources/cart.png">
-            </a>
-        </div> 
-        <div id="title-nav-bar-side" class="title-menu-side">
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                <a href="mens-outerwear.html">Men's Outerwear </a>
-                <a href="">Ladies Outerwear </a>		
-                <a href="">Men's T-Shirts </a>	
-                <a href="">Ladies T-Shirts </a> 
+    <!-- title, the cart button and the side nav button   -->
+    <header class="title-home">
+        <div>
+            <span onclick="openNav()" class="title-menu-icon">&#9776;</span>
         </div>
-        <div class="cart-content">
-            <diV class="cart-title">
-                <span>Your Cart</span>
-            </diV>
-            <section class="cart-items">
-                <div class="cart-item-name">
-                    <img src="resources/men-outerwear-2.jpg">
-                    <p>
-                        Men's Hoodie-Android Green
-                    </p>
-                </div>
-                <div class="cart-item-details-list">
-                    <div class="cart-item-details">
-                        <label>Qty:</label>
-                        <select>
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
-                            <option>6</option>
-                        </select>
-                        <label>Size:</label>
-                        <select>
-                            <option>XS</option>
-                            <option>S</option>
-                            <option>M</option>
-                            <option>L</option>
-                            <option>XL</option>
-                        </select>
-                        <span>$50</span>
-                    </div>
-                    <div>
-                        <a class="close-button">&times;</a>
-                    </div>
-                </div>
-            </section>
-            <section class="cart-item-total-price">
-                <div class="cart-item-total-price-checkout">
-                    <p>Total:</p>
-                    <span>$50.00</span>
-                </div>
-                <form class="item-checkout-button">
-                    <button type="submit" formaction="checkout.html" id="item-add-to-cart">
-                        CHECKOUT
-                    </button>
-                </form>
-            </section>
+
+        <span>S H O P</span>
+        <a href="cart.html">
+            <img id="cart-icon" alt="cart icon" src="resources/cart.png">
+        </a>
+    </header>
+    <nav id="title-nav-bar-side" class="title-menu-side">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="mens-outerwear.html">Men's Outerwear </a>
+        <a href="">Ladies Outerwear </a>
+        <a href="">Men's T-Shirts </a>
+        <a href="">Ladies T-Shirts </a>
+    </nav>
+    <main class="cart-content">
+        <div class="cart-title">
+            <span>Your Cart</span>
         </div>
+        <section class="cart-items">
+            <figure class="cart-item-name">
+                <img src="resources/men-outerwear-2.jpg">
+                <p>
+                    Men's Hoodie-Android Green
+                </p>
+            </figure>
+            <div class="cart-item-details-list">
+                <div class="cart-item-details">
+                    <label>Qty:</label>
+                    <select>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                    </select>
+                    <label>Size:</label>
+                    <select>
+                        <option>XS</option>
+                        <option>S</option>
+                        <option>M</option>
+                        <option>L</option>
+                        <option>XL</option>
+                    </select>
+                    <span>$50</span>
+                </div>
+                <div>
+                    <a class="close-button">&times;</a>
+                </div>
+            </div>
+        </section>
+        <section class="cart-item-total-price">
+            <div class="cart-item-total-price-checkout">
+                <p>Total:</p>
+                <span>$50.00</span>
+            </div>
+            <form class="item-checkout-button">
+                <button type="submit" formaction="checkout.html" id="item-add-to-cart">
+                    CHECKOUT
+                </button>
+            </form>
+        </section>
+    </main>
+    <footer class="title-footer">
+        <a href="https://github.com/manoharglm/">Made by Manohar</a>
+        <span>DEMO ONLY</span>
+    </footer>
 </body>
+
 </html>
