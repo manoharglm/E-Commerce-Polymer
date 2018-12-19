@@ -6,7 +6,8 @@ Guidelines while reviewing the project:
 
 	-> In the project only Men's Outerwear section was developed
 	-> In the Men's outerwear section only the second item in first row(Android Hoddie) got the item description page.
-	-> Transisition effects are not yet added to the Checkout page(form).
+
+
 
 
 
