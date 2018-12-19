@@ -18,7 +18,7 @@
             <span onclick="openNav()" class="title-menu-icon">&#9776;</span>
         </div>
 
-		<span><a href="index.html" class="top-title-home">S H O P</a></span>
+        <span><a href="index.html" class="top-title-home">S H O P</a></span>
         <a href="cart.html">
             <img id="cart-icon" alt="cart icon" src="resources/cart.png">
         </a>
@@ -38,16 +38,36 @@
         <div class="checkout-form">
             <section class="checkout-form-left-row">
                 <h5>Account Information</h3>
-                    <input placeholder="Email" type="email">
-                    <input type="tel" placeholder="Phone Number">
+                    <div class="checkout-form-input">
+                        <input type="email">
+                        <span class="bar"></span>
+                        <label class="material-label">Email</label> 
+                    </div>
+                    <div class="checkout-form-input">
+                        <input type="tel" Phone Number>
+                        <span class="bar"></span>
+                        <label class="material-label">Phone Number</label>
+                    </div>
                     <h5>Shipping Address</h5>
-                    <input type="text" placeholder="Address">
+                    <div class="checkout-form-input">
+                        <input type="text" Address>
+                        <span class="bar"></span>
+                        <label class="material-label">Address</label>
+                    </div>
                     <div class="checkout-state-zip-flex">
-                        <input type="text" placeholder="State/Province">
-                        <input type="text" placeholder="Zip/Postal Code">
+                        <div class="checkout-form-input">
+                            <input type="text">
+                            <span class="bar"></span>
+                            <label class="material-label">State/Province</label> 
+                        </div>
+                        <div class="checkout-form-input">
+                            <input type="text" >
+                            <span class="bar"></span>
+                            <label class ="material-label">Zip/Postal Code</label>
+                        </div>
                     </div>
                     <div class="checkout-country-select">
-                        <label>Country</label>
+                        <p class="checkout-label">Country</p>
                         <select>
                             <option>India</option>
                             <option>United States</option>
@@ -64,9 +84,17 @@
             </section>
             <section class="checkout-form-right-row">
                 <h5>Payment Method</h5>
-                <input type="text" placeholder="Cardholder Name">
-                <input type="text" placeholder="Card Number">
-                <label>Expiry</label>
+                <div class="checkout-form-input">
+                    <input type="text" >
+                    <span class="bar"></span>
+                    <label class ="material-label">Cardholder Name</label>
+                </div>
+                <div class="checkout-form-input">
+                    <input type="text">
+                    <span class="bar"></span>
+                    <label class ="material-label">Card Number</label>
+                </div>
+                <p class="checkout-label">Expiry</p>
                 <div class="checkout-form-expiry-date">
                     <select name="Month">
                         <option>Jan</option>
@@ -97,15 +125,19 @@
                         <option>2027</option>
                         <option>2028</option>
                     </select>
-                    <input type="password" placeholder="cvv">
+                    <div class="checkout-form-input">
+                        <input type="password">
+                        <span class="bar"></span>
+                        <label class ="material-label">cvv</label>
+                    </div>
                 </div>
                 <h5>Order Summary</h5>
                 <div class="checkout-order-summary">
-                    <p>Men's Hoodie</p>
+                    <span>Men's Hoodie</span>
                     <span>$50.00</span>
                 </div>
                 <div class="checkout-total">
-                    <p>Total</p>
+                    <span>Total</span>
                     <span>$50.00</span>
                 </div>
                 <form class="item-checkout-button">

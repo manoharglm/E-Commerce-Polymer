@@ -73,12 +73,23 @@ html {
     .cart-content{
         margin:5%;
     }
+    .checkout-content{
+        margin: 5% 10%;
+        padding-bottom: 10%;
+    }
 }
 @media only screen and (min-width: 768px) {
     .title-menu{
         display: flex;
         justify-content: center;
         font-size: 0.8em;
+    }
+    .title-menu a{
+        padding-bottom: 6px;
+    }
+    .title-menu a:focus{
+        padding-bottom: 4px;
+        border-bottom: 2px solid black;
     }
     .title-menu-icon{
         visibility: hidden;
@@ -103,11 +114,15 @@ html {
         align-items: center;
     } */
     .cart-content{
-        margin:5% 15%;
+        margin:5% 20%;
     }
     /* .cart-item-details-list{
         justify-content: space-between;
     } */
+    .checkout-content{
+        margin: 5% 15%;
+        padding-bottom: 10%;
+    }
 }
 
 .title-home{
@@ -196,6 +211,10 @@ button{
     border: 1.5px solid black;   
     cursor: pointer;
     opacity: 0.7;
+}
+button:focus{
+    background-color: black;
+    color: white;
 }
 .title-tshirts{
     display: flex;
@@ -374,10 +393,7 @@ button{
     /* justify-content: flex-start; */
 }  
 /* Style for checkout page*/
-.checkout-content{
-    margin: 5% 10%;
-    padding-bottom: 10%;
-}
+
 .checkout-content input:not([type="checkbox"]),select{
     width: 100%;
     border: transparent;
@@ -386,13 +402,22 @@ button{
     border-bottom: 1px solid rgba(0,0,0,0.2);
     background-color: transparent;
     display: block;
+    transition: opacity 3s;
+    /* padding-bottom: 1.5%; */
+}
+select{
+    font-size: 1em;
+}
+.checkout-content input:not([type="checkbox"]):focus{
+    border-bottom:3px solid rgba(0,0,0,1);
 }
 .checkout-content input::-webkit-input-placeholder {
     font-size: 1.35em;
 }
-.checkout-content label{
+/* .checkout-content label{
     font-size: 0.8em;
-}
+    opacity: 0.7;
+} */
 .checkout-title{
     text-align: center;
 }
@@ -417,5 +442,30 @@ button{
 .checkout-total, .checkout-order-summary, .checkout-form-expiry-date{
     display: flex;
     align-items: baseline;
-    justify-content: space-between;  
+    justify-content: space-between;
+    padding-bottom: 2%;
+    opacity: 1;  
 }
+.checkout-label{
+    padding-top: 5%;
+    font-size: 0.8em;
+}
+/* Material design for checkout form */
+.checkout-form-input{
+    position: relative;
+}
+.material-label {
+    position: absolute;
+    left: 5px;
+    top: 25px;
+    font-size: 1em;
+    opacity: 0.5;
+    transition: 0.2s ease all;
+    z-index: -1;
+  }
+input:focus~.material-label {
+    top: 5px;
+    font-size: 0.7em;
+    opacity: 1;
+}
+  
