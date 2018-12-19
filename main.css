@@ -4,20 +4,27 @@
 body{
     border: 0;
     margin: 0;
-    /* position: relative; */
+    height: 100%;
+}
+html {
+    padding-bottom: 20%;
+    min-height: 100%;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    position: relative;
 }
 @media only screen and (max-width: 767px) {
     .title-menu-icon{
-        visibility: unset;
+        visibility: visible;
     }
     .title-menu{
         display: none;
     }   
     .title-cover-image img{
-        max-height: 200px;
+        max-height: 240px;
     }
     /* this property changes the men-outerwear.html to align two hoodies in a row */
-    .men-outerware-items{
+    .men-outerwear-items{
         display: grid;
         grid-template-columns:auto auto;
     }
@@ -42,18 +49,16 @@ body{
         color: white;
         background-color: #000066;
         height: 60px;
+        opacity: 1;
     }
     /* hide cart item details to display them on below line in mobile view */
-    /* .cart-item-details{
-        display: none;
-    } */
-    .cart-item-total-price-checkout{
+
+    /* .cart-item-total-price-checkout{
         right:0px;
-    }
+    } */
     .cart-item-details-list{
         flex-direction: column-reverse;
-         align-items: flex-end;
-        /*justify-content: baseline; */
+         /* align-items: flex-end; */
     } 
     .cart-items{
         align-items: baseline;
@@ -63,9 +68,10 @@ body{
         grid-template-columns: 1fr;
     }
     .close-button{
-        right: 15%;
-        position: absolute;
-        /* margin-bottom: 55px; */
+        align-self: flex-end;
+    }
+    .cart-content{
+        margin:5%;
     }
 }
 @media only screen and (min-width: 768px) {
@@ -74,7 +80,10 @@ body{
         justify-content: center;
         font-size: 0.8em;
     }
-    .men-outerware-items{
+    .title-menu-icon{
+        visibility: hidden;
+    }
+    .men-outerwear-items{
         display: grid;
         grid-template-columns: auto auto auto;
     }
@@ -83,29 +92,28 @@ body{
         display: grid;
         grid-template-columns: 1fr 1fr;
         align-items: center;
-        margin-top: 5%;
+        margin:5% 5%;
     }
     .checkout-form{
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-column-gap: 5%;
     }
-    .cart-items{
+    /* .cart-items{
         align-items: center;
-    }
+    } */
     .cart-content{
         margin:5% 15%;
     }
-    .cart-item-details-list{
+    /* .cart-item-details-list{
         justify-content: space-between;
-    }
+    } */
 }
-/* body{
-    margin-top: 20px;
-} */
+
 .title-home{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     font-weight: bold;
     margin: 2%;
 }
@@ -116,12 +124,16 @@ body{
 }
 
 .title-home div{
-    visibility: hidden;
     text-decoration: none;
     color: black;
     cursor:pointer ;
     width: 32px;
     height: auto;
+}
+.top-title-home{
+    text-decoration: none;
+    color: black;
+    opacity: 1;
 }
 .title-menu-side {
     visibility: hidden;
@@ -170,30 +182,36 @@ body{
 }
 .title-cover-image img{
     width: 100%;
-    height: 300px;
+    height: 320px;
     object-fit: cover;
+}
+.title-cover-image span{
+    font-size: 0.8em;
 }
 button{
     background-color: transparent;
-    padding: 10px 35px;
+    padding: 0.7em 2em;
     text-align: center;
-    font-size: 16px;   
-    border: 2px solid black;   
+    font-size: 0.8em;   
+    border: 1.5px solid black;   
     cursor: pointer;
+    opacity: 0.7;
 }
 .title-tshirts{
     display: flex;
 }
-/* .title-footer{
+.title-footer{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding-top: 10%;
     bottom: 0;
     left: 0;
     right: 0;
     position: absolute;
     height:50px;
+    z-index: -1;
 }
 .title-footer a{
     font-size: 0.8em;
@@ -208,33 +226,36 @@ button{
     text-align: center;
     padding: 10px 10px;
     opacity: 1;
-} */
+}
 
-.men-outerware-items a{
+.men-outerwear-items a{
     display: flex;
     flex-direction: column;
     align-items: center;
     color: black;
     text-decoration: none;
 }
-.men-outerware-item > *{
-    padding: 2%;
+.men-outerwear-item{
+    line-height: 1.5;
 }
-.men-outerware-item span{
+
+.men-outerwear-item span{
     opacity: 0.7;
-    font-size: 0.9em;
+    font-size: 0.8em;
 }
-.men-outerware-item img{
+.men-outerwear-item img{
     /* align-self: center; */
     max-width: 100%;
+    padding: 10% 0%;
 }
- .men-outerware-page{
+.men-outerwear-item strong{
+    font-size: 0.8em;
+    opacity: 0.85;
+}
+ .men-outerwear-page{
     box-sizing: border-box;
     width: 100%;
 }
-/* .men-outerware-item{
-    padding: 2%;
-} */
 /* Item Description page styling */
 .title-back-arrow-icon img{
     resize: auto;
@@ -272,16 +293,14 @@ button{
     opacity: 0.7;
     font-size:0.9em;
 }
-select option{
-    padding-left: 25%;
-}
 .item-description-dropdown select{
     background: transparent;
     border: none;
     width:100%;
     outline: none;
     z-index: 1;
-    text-indent: 20%;
+    /* text-indent: 20%; */
+    padding-left: 25%;
     font-size: 1.2em;
     font-weight: 300;
 }
@@ -293,10 +312,8 @@ select option{
     font-size: 1.1em;
 }
 .cart-items{
-    display: grid;
-    /* align-items: center; */
-    /* justify-content: space-between; */
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    justify-content: space-between;
 }
 .cart-items, .cart-item-total-price{
     margin: 5%;
@@ -311,26 +328,28 @@ select option{
 .cart-item-name{
     display: flex;
     align-items: center;
+    /* justify-content: space-between; */
 }
 .cart-item-details select{
     background-color: transparent;
     border: none;
     outline: none;
+    padding: 0% 5%;
 }
 .cart-item-total-price{
     display: flex;
     justify-content: flex-end;
+    align-items: center;
 }
-
 .cart-item-details{
     display: flex;
     align-items: baseline;
     padding: 5%;
+    /* justify-content: flex-end; */
 }
 .cart-item-details *{
     margin-right: 5%;
 }
-
 .cart-item-total-price-checkout{
     display: flex;
     align-items: center;
@@ -340,7 +359,6 @@ select option{
 .cart-item-total-price-checkout span{
     padding-left: 15%;
 }
-
 .cart-content section{
     font-size: 1em;
 }
@@ -353,7 +371,7 @@ select option{
 .cart-item-details-list{
     display: flex;
     align-items: baseline;
-    /* justify-content: space-between; */
+    /* justify-content: flex-start; */
 }  
 /* Style for checkout page*/
 .checkout-content{
@@ -368,7 +386,6 @@ select option{
     border-bottom: 1px solid rgba(0,0,0,0.2);
     background-color: transparent;
     display: block;
-    margin-bottom: 5%;
 }
 .checkout-content input::-webkit-input-placeholder {
     font-size: 1.35em;
